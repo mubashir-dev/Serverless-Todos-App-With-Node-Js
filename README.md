@@ -24,13 +24,19 @@ This template configures a single function, `api`, which is responsible for hand
 Install dependencies with:
 
 ```
-npm install
+yarn install
+```
+
+for running it locally
+
+```
+sls local
 ```
 
 and then deploy with:
 
 ```
-serverless deploy
+sls deploy
 ```
 
 After running deploy, you should see output similar to:
