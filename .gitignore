@@ -1,0 +1,10 @@
+node_modules
+.serverless
+.env.dev
+.env.prod
+.env.test
+.env.local
+.DS_Store
+.vscode
+.idea
+dist

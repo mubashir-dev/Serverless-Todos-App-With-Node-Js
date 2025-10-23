@@ -1,0 +1,24 @@
+org: helloworld101
+service: todos-app
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  timeout: 10
+  memorySize: 256 # Memory size in MB
+
+custom:
+  serverless-offline:
+    httpPort: ${env:PORT, 3000}
+  dotenv:
+    path: .env.${opt:stage, 'dev'}
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: "*"
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
